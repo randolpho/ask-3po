@@ -108,9 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DecisionController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Decision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Translation\Languages.cs" />
     <Compile Include="Translation\WhisperTranslator.cs" />
@@ -120,6 +123,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="img\beaker.jpg" />
+    <Content Include="img\boomhauer.png" />
+    <Content Include="img\c3po.jpg" />
+    <Content Include="img\charley brown.jpg" />
+    <Content Include="img\chef.jpg" />
+    <Content Include="img\cousin it.jpg" />
+    <Content Include="img\dathon.jpg" />
+    <Content Include="img\gary.jpg" />
+    <Content Include="img\hodor.jpg" />
+    <Content Include="img\kenny.png" />
+    <Content Include="img\librarian.jpg" />
+    <Content Include="img\mushmouth.jpg" />
+    <Content Include="img\pyro.png" />
+    <Content Include="img\qbert.jpg" />
+    <Content Include="img\r2d2.JPG" />
+    <Content Include="img\shnitzel.png" />
+    <Content Include="Scripts\knockout-2.2.1.debug.js" />
+    <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Translation\Languages.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -131,8 +152,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Content Include="Views\Default\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -10,9 +10,9 @@ namespace Ask3po.Web
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "Decision",
+                routeTemplate: "decision",
+                defaults: new { controller = "Decision", action="GetDecision"}
             );
         }
     }

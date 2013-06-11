@@ -2,7 +2,6 @@
 using System.Net;
 using Ask3po.Web.Translation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Translation;
 
 namespace UnitTests
 {
