@@ -123,24 +123,29 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
-    <Content Include="img\beaker.jpg" />
-    <Content Include="img\boomhauer.png" />
-    <Content Include="img\c3po.jpg" />
-    <Content Include="img\charley brown.jpg" />
-    <Content Include="img\chef.jpg" />
-    <Content Include="img\cousin it.jpg" />
-    <Content Include="img\dathon.jpg" />
-    <Content Include="img\gary.jpg" />
-    <Content Include="img\hodor.jpg" />
-    <Content Include="img\kenny.png" />
-    <Content Include="img\librarian.jpg" />
-    <Content Include="img\mushmouth.jpg" />
-    <Content Include="img\pyro.png" />
-    <Content Include="img\qbert.jpg" />
-    <Content Include="img\r2d2.JPG" />
-    <Content Include="img\shnitzel.png" />
+    <Content Include="static\app.js" />
+    <Content Include="static\img\beaker.jpg" />
+    <Content Include="static\img\boomhauer.png" />
+    <Content Include="static\img\c3po-icon.png" />
+    <Content Include="static\img\c3po.jpg" />
+    <Content Include="static\img\charley brown.jpg" />
+    <Content Include="static\img\chef.jpg" />
+    <Content Include="static\img\chewbacca.png" />
+    <Content Include="static\img\cousin it.jpg" />
+    <Content Include="static\img\dathon.jpg" />
+    <Content Include="static\img\gary.jpg" />
+    <Content Include="static\img\hodor.jpg" />
+    <Content Include="static\img\kenny.png" />
+    <Content Include="static\img\librarian.jpg" />
+    <Content Include="static\img\mushmouth.jpg" />
+    <Content Include="static\img\pyro.png" />
+    <Content Include="static\img\qbert.jpg" />
+    <Content Include="static\img\r2d2.JPG" />
+    <Content Include="static\img\shnitzel.png" />
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="static\img\stars.jpg" />
+    <Content Include="static\style.css" />
     <Content Include="Translation\Languages.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -156,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\fonts\SWCrawlBody.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\fonts\STARWARS.ttf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

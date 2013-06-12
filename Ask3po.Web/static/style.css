@@ -1,0 +1,36 @@
+﻿@font-face
+{
+    font-family: STARWARS;
+    font-style: normal;
+    font-weight: normal;
+    src: local(STARWARS), url('/static/fonts/STARWARS.TTF') format('opentype');
+}
+
+@font-face
+{
+    font-family: SWCrawlBody;
+    font-style: normal;
+    font-weight: normal;
+    src: local(SWCrawlBody), url('/static/fonts/SWCrawlBody.TTF') format('opentype');
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background: black url("/static/img/stars.jpg") no-repeat top center fixed;
+    background-size: cover;
+    font-family: STARWARS;
+    height: 100%;
+    overflow: hidden;
+    color: #DAB43C;
+}
+
+h1
+{
+    font-size: 48px;
+    text-align: center;
+}
