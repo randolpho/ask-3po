@@ -145,6 +145,12 @@
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="static\img\stars.jpg" />
+    <Content Include="static\music\ANewHopeII.mp3" />
+    <Content Include="static\music\BrotherAndSister.mp3" />
+    <Content Include="static\music\CityInTheClouds.mp3" />
+    <Content Include="static\music\DesertPlanet.mp3" />
+    <Content Include="static\music\LeiasTheme.mp3" />
+    <Content Include="static\music\YodasTheme.mp3" />
     <Content Include="static\style.css" />
     <Content Include="Translation\Languages.txt" />
     <Content Include="Web.config" />
@@ -168,6 +174,7 @@
   <ItemGroup>
     <Content Include="static\fonts\STARWARS.ttf" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

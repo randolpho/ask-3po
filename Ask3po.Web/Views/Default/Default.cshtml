@@ -2,11 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Ask Threepio</title>
-    <link href="/static/style.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/static/img/c3po-icon.png" />
+    <link href="/static/style.css" rel="stylesheet" />
+    <script src="/Scripts/knockout-2.2.1.js"></script>
 </head>
 <body>
-    <h1>ASK THREEPIO</h1>
-    <script src="/Scripts/knockout-2.2.1.js"></script>
+    <div id="header">
+        <h1>ASK THREEPIO</h1>
+    </div>
+    <div id="content">
+        <div id="main">
+            <div id="3poBox">
+                <img src="~/static/img/c3po.jpg" />
+            </div>
+            <div id="chatbox-outer"></div>
+            <div id="friendbox">
+                <img src="~/static/img/chewbacca.png" />
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <audio src="~/static/music/LeiasTheme.mp3" controls="controls" />
+        </div>
+        <div>
+            &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
+                They were blatantly stolen and used without permission. Something, something, Fair Use? 
+        </div>
+    </div>
 </body>
 </html>
