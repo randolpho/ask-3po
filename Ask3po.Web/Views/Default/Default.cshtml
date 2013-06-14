@@ -13,21 +13,26 @@
     <div id="content">
         <div id="main">
             <div id="3poBox">
-                <img src="~/static/img/c3po.jpg" />
+                @*<img src="~/static/img/c3po.jpg" />*@
             </div>
             <div id="chatbox-outer"></div>
             <div id="friendbox">
-                <img src="~/static/img/chewbacca.png" />
+                @*<img src="~/static/img/chewbacca.png" />*@
             </div>
         </div>
     </div>
     <div id="footer">
-        <div>
-            <audio src="~/static/music/LeiasTheme.mp3" controls="controls" />
-        </div>
-        <div>
-            &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
+        &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
                 They were blatantly stolen and used without permission. Something, something, Fair Use? 
+    </div>
+    <div id="jukebox">
+        <div id="jukebox-tab">CANTINA JUKEBOX</div>
+        <div id="jukebox-content">
+            <audio id="player" controls="controls">
+                <source src="~/static/music/1_11_Cantina.mp3" />
+                <source src="~/static/music/2_01_Leia_s_Theme.mp3" />
+            </audio><br />
+            <p>Todo: add selector and sound effects</p> 
         </div>
     </div>
 </body>

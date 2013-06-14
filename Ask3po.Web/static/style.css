@@ -21,9 +21,9 @@ html
 
 body
 {
-    background: black url("/static/img/stars.jpg") no-repeat top center fixed;
-    background-size: cover;
+    background: black url("/static/img/stars.jpg") repeat-y top center fixed;
     font-family: SWCrawlBody;
+    font-size: 12pt;
     overflow: hidden;
     color: #DAB43C;
     height: 100%;
@@ -47,20 +47,138 @@ h1
     width: 100%;
 }
 
-#content {
+#content
+{
     position: fixed;
     top: 100px;
     bottom: 60px;
     width: 100%;
 }
 
-#footer {
+#footer
+{
     position: fixed;
-    height: 60px;
+    height: 30px;
     width: 100%;
     text-align: center;
     font-size: 12px;
-    background: rgba(0,0,0,0);
     bottom: 0px;
 }
 
+
+
+#slideout
+{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 35px;
+    height: 200px;
+    padding: 12px 0;
+    text-align: center;
+    background: #6DAD53;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid red;
+}
+
+#slideout_inner
+{
+    position: fixed;
+    top: 40px;
+    left: -400px;
+    background: #6DAD53;
+    width: 300px;
+    padding: 25px;
+    height: 130px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-align: left;
+    -webkit-border-radius: 0 0 20px 0;
+    -moz-border-radius: 0 0 20px 0;
+    -ms-border-radius: 0 0 20px 0;
+    -o-border-radius: 0 0 20px 0;
+    border-radius: 0 0 20px 0;
+    border: 1px solid red;
+}
+
+#slideout:hover
+{
+    left: 400px;
+}
+
+    #slideout:hover #slideout_inner
+    {
+        left: 0;
+    }
+
+#jukebox-tab
+{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding: 10px;
+    border-top: 1px solid #DAB43C;
+    border-left: 1px solid #DAB43C;
+    border-right: 1px solid #DAB43C;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    left: 309px;
+    top: 125px;
+    font-family: STARWARS;
+    color: black;
+    text-shadow: 0px 0px 8px #DAB43C;
+}
+
+#jukebox
+{
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    -ms-border-radius: 0 20px 20px 0;
+    -o-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    border-top: 1px solid #DAB43C;
+    border-bottom: 1px solid #DAB43C;
+    border-right: 1px solid #DAB43C;
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    left: -402px;
+    top: 50px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#jukebox:hover
+{
+    left: 0px;
+}
+
+#jukebox-content
+{
+    padding: 20px;
+}
+
+#player
+{
+    background: rgba(0,0,0,0);
+}
