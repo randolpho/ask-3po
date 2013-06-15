@@ -52,6 +52,8 @@ h1
     position: fixed;
     top: 100px;
     bottom: 60px;
+    left: 0px;
+    right: 0px;
     width: 100%;
 }
 
@@ -176,9 +178,4 @@ h1
 #jukebox-content
 {
     padding: 20px;
-}
-
-#player
-{
-    background: rgba(0,0,0,0);
 }
