@@ -7,32 +7,64 @@
     <script src="/Scripts/knockout-2.2.1.js"></script>
 </head>
 <body>
-    <div id="header">
-        <h1>ASK THREEPIO</h1>
-    </div>
     <div id="content">
-        <div id="jukebox">
-            <div id="jukebox-tab">CANTINA JUKEBOX</div>
-            <div id="jukebox-content">
-                <audio id="player" controls="controls">
-                    <source type="audio/mpeg" src="/static/music/1_11_Cantina.mp3" />
-                </audio><br />
-                <p>Todo: add selector and sound effects</p> 
-            </div>
-        </div>
         <div id="main">
-            <div id="3poBox">
-                @*<img src="~/static/img/c3po.jpg" />*@
+            <h1>ASK THREEPIO</h1>
+            <div id="threepiobox">
+                <div class="personbox">
+                    <img src="~/static/img/c3po.jpg" />
+                </div>
             </div>
-            <div id="chatbox-outer"></div>
+            <div id="chatbox">
+                <div id="chatboxinner">
+                    <div class="speech">
+                        <div class="threepiospeech">
+                            <p>Oh!</p>
+                            <p>Hello there. I am C-3P0, Human-Cyborg Relations. You must be my new master.</p>
+                        </div>
+                    </div>
+                    <div class="speech">
+                        <div class="friendspeech">
+                            <p>Grrawwwwrph.</p>
+                        </div>
+                    </div>
+                    <div class="speech">
+                        <div class="threepiospeech">
+                            <p>Please ask me a yes or no question to help you decide:</p>
+                            <p>
+                                <input type="text" />
+                                <button>Decide!</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="speech">
+                        <div class="threepiospeech">
+                            <p>Oh!</p>
+                            <p>Hello there. I am C-3P0, Human-Cyborg Relations. You must be my new master.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="friendbox">
-                @*<img src="~/static/img/chewbacca.png" />*@
+                <div class="personbox">
+                    <img src="~/static/img/chewbacca.png" />
+                </div>
             </div>
         </div>
     </div>
     <div id="footer">
         &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
-                They were blatantly stolen and used without permission. Something, something, Fair Use? 
+                    They were blatantly stolen and used without permission. Something, something, Fair Use? 
+    </div>
+    <div id="jukebox">
+        <div id="jukebox-tab">♬	CANTINA JUKEBOX</div>
+        <div id="jukebox-content">
+            <audio id="player" controls="controls">
+                <source type="audio/mpeg" src="/static/music/1_11_Cantina.mp3" />
+            </audio>
+            <br />
+            <p>Todo: add selector and sound effects</p>
+        </div>
     </div>
 </body>
 </html>

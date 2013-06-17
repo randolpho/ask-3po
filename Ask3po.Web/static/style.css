@@ -21,14 +21,13 @@ html
 
 body
 {
-    background: black url("/static/img/stars.jpg") repeat-y top center fixed;
-    font-family: SWCrawlBody;
+    background: black url("/static/img/stars.jpg") no-repeat center center;
+    font-family: SWCrawlBody, 'Arial Rounded MT';
     font-size: 12pt;
     overflow: hidden;
     color: #DAB43C;
     height: 100%;
 }
-
 
 h1
 {
@@ -36,91 +35,36 @@ h1
     font-size: 48px;
     text-align: center;
     color: black;
-    text-shadow: 0px 0px 8px #DAB43C;
-}
-
-#header
-{
-    position: fixed;
-    top: 0;
-    height: 100px;
-    width: 100%;
+    text-shadow: 0px 0px 30px #DAB43C;
 }
 
 #content
 {
     position: fixed;
-    top: 100px;
-    bottom: 60px;
+    top: 0px;
+    bottom: 30px;
     left: 0px;
     right: 0px;
-    width: 100%;
+    overflow: auto;
+}
+
+#main
+{
+    margin: 0 auto;
+    width: 1000px;
 }
 
 #footer
 {
     position: fixed;
+    bottom: 0px;
     height: 30px;
     width: 100%;
     text-align: center;
     font-size: 12px;
-    bottom: 0px;
+    clear: both;
 }
 
-
-
-#slideout
-{
-    position: fixed;
-    top: 40px;
-    left: 0;
-    width: 35px;
-    height: 200px;
-    padding: 12px 0;
-    text-align: center;
-    background: #6DAD53;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-border-radius: 0 20px 20px 0;
-    -moz-border-radius: 0 20px 20px 0;
-    border-radius: 0 20px 20px 0;
-    border: 1px solid red;
-}
-
-#slideout_inner
-{
-    position: fixed;
-    top: 40px;
-    left: -400px;
-    background: #6DAD53;
-    width: 300px;
-    padding: 25px;
-    height: 130px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    text-align: left;
-    -webkit-border-radius: 0 0 20px 0;
-    -moz-border-radius: 0 0 20px 0;
-    -ms-border-radius: 0 0 20px 0;
-    -o-border-radius: 0 0 20px 0;
-    border-radius: 0 0 20px 0;
-    border: 1px solid red;
-}
-
-#slideout:hover
-{
-    left: 400px;
-}
-
-    #slideout:hover #slideout_inner
-    {
-        left: 0;
-    }
 
 #jukebox-tab
 {
@@ -130,9 +74,9 @@ h1
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
     padding: 10px;
-    border-top: 1px solid #DAB43C;
-    border-left: 1px solid #DAB43C;
-    border-right: 1px solid #DAB43C;
+    border-top: 2px solid #DAB43C;
+    border-left: 2px solid #DAB43C;
+    border-right: 2px solid #DAB43C;
     -webkit-border-radius: 20px 20px 0 0;
     -moz-border-radius: 20px 20px 0 0;
     -ms-border-radius: 20px 20px 0 0;
@@ -145,7 +89,7 @@ h1
     top: 125px;
     font-family: STARWARS;
     color: black;
-    text-shadow: 0px 0px 8px #DAB43C;
+    text-shadow: 0px 0px 10px #DAB43C;
 }
 
 #jukebox
@@ -155,9 +99,9 @@ h1
     -ms-border-radius: 0 20px 20px 0;
     -o-border-radius: 0 20px 20px 0;
     border-radius: 0 20px 20px 0;
-    border-top: 1px solid #DAB43C;
-    border-bottom: 1px solid #DAB43C;
-    border-right: 1px solid #DAB43C;
+    border-top: 2px solid #DAB43C;
+    border-bottom: 2px solid #DAB43C;
+    border-right: 2px solid #DAB43C;
     width: 400px;
     height: 300px;
     position: fixed;
@@ -170,12 +114,193 @@ h1
     transition-duration: 0.3s;
 }
 
-#jukebox:hover
-{
-    left: 0px;
-}
+    #jukebox:hover
+    {
+        left: 0px;
+    }
 
 #jukebox-content
 {
     padding: 20px;
+}
+
+#threepiobox
+{
+    float: left;
+    width: 280px;
+    height: 394px;
+}
+
+#friendbox
+{
+    float: right;
+    width: 280px;
+    height: 394px;
+}
+
+.personbox
+{
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -ms-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+    border: 2px solid #DAB43C;
+    width: 280px;
+    height: 390px;
+    display: table-cell; /* I hate this hack so, so much. CSS still can't center vertically easily. Why??!? Why must I sully my pure HTML/CSS with display reallocations?*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+    .personbox img
+    {
+        max-width: 240px;
+        max-height: 360px;
+    }
+
+#chatbox
+{
+    position: relative;
+    float: left;
+    height: 390px;
+    width: 425px;
+    overflow: hidden;
+}
+
+#chatboxinner
+{
+    position: relative;
+    height: 390px;
+    width: 445px;
+    overflow-y: scroll;
+}
+
+.speech
+{
+    position: relative;
+    width: 390px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    /*padding: 7px;*/
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -ms-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+    border: 2px solid #DAB43C;
+}
+
+    .speech p
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+.threepiospeech:before
+{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: -32px;
+    height: 30px;
+    left: -10px;
+    width: 50px;
+    border-right: 2px solid #DAB43C;
+    background: transparent;
+    -webkit-border-bottom-right-radius: 80px 50px;
+    -moz-border-radius-bottomright: 80px 50px;
+    border-bottom-right-radius: 80px 50px;
+}
+
+.threepiospeech:after
+{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: -32px;
+    height: 30px;
+    left: 7px;
+    width: 20px;
+    border-right: 2px solid #DAB43C;
+    background: transparent;
+    -webkit-border-bottom-right-radius: 40px 50px;
+    -moz-border-radius-bottomright: 40px 50px;
+    border-bottom-right-radius: 40px 50px;
+}
+
+.friendspeech:before
+{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: -32px;
+    height: 30px;
+    right: -10px;
+    width: 50px;
+    border-left: 2px solid #DAB43C;
+    background: transparent;
+    -webkit-border-bottom-left-radius: 80px 50px;
+    -moz-border-radius-bottomleft: 80px 50px;
+    border-bottom-left-radius: 80px 50px;
+}
+
+.friendspeech:after
+{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: -32px;
+    height: 30px;
+    right: 7px;
+    width: 20px;
+    border-left: 2px solid #DAB43C;
+    background: transparent;
+    -webkit-border-bottom-left-radius: 40px 50px;
+    -moz-border-radius-bottomleft: 40px 50px;
+    border-bottom-left-radius: 40px 50px;
+}
+
+input
+{
+    margin: 2px;
+    height: 24px;
+    width: 220px;
+    border: 2px solid #DAB43C;   
+    background: black;
+    color: #DAB43C;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    input:focus
+    {
+        outline: none;
+    }
+
+button
+{
+    height: 30px;
+    background: transparent;
+    border: 2px solid #DAB43C;        
+    font-family: STARWARS;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 8px #DAB43C;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin: 2px;
+    margin-left: 5px; 
+    margin-right: 5px;
+}
+button:active
+{
+    border: 2px solid #b69630;   
+    position: relative;
+    top: 1px;
+    left: 1px;
 }
