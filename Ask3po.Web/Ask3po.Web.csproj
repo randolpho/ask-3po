@@ -123,9 +123,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
-    <Content Include="static\app.js" />
+    <Content Include="Scripts\Model\conversations-vm.js" />
+    <Content Include="Scripts\Model\jukebox-vm.js" />
+    <Content Include="Scripts\Model\proxy.js" />
+    <Content Include="Scripts\Model\static-data.js" />
     <Content Include="static\img\beaker.jpg" />
     <Content Include="static\img\boomhauer.png" />
+    <Content Include="static\img\boxart.jpg" />
     <Content Include="static\img\c3po-icon.png" />
     <Content Include="static\img\c3po.jpg" />
     <Content Include="static\img\charley brown.jpg" />
@@ -169,6 +173,7 @@
     <Content Include="static\music\2_09_Ben_Kenobi_s_Death.mp3" />
     <Content Include="static\music\2_10_Battle_of_Yavin.mp3" />
     <Content Include="static\music\2_11_Throne_Room.mp3" />
+    <Content Include="static\sound\human-cyborg relations.mp3" />
     <Content Include="static\sound\saber_off.mp3" />
     <Content Include="static\sound\saber_on.mp3" />
     <Content Include="static\style.css" />

@@ -5,6 +5,7 @@
     <link rel="icon" type="image/png" href="/static/img/c3po-icon.png" />
     <link href="/static/style.css" rel="stylesheet" />
     <script src="/Scripts/knockout-2.2.1.js"></script>
+    <script src="/Scripts/Model/proxy.js"></script>
 </head>
 <body>
     <div id="content">
@@ -12,7 +13,7 @@
             <h1>ASK THREEPIO</h1>
             <div id="threepiobox">
                 <div class="personbox">
-                    <img src="~/static/img/c3po.jpg" />
+                    <img src="/static/img/c3po.jpg" />
                 </div>
             </div>
             <div id="chatbox">
@@ -30,7 +31,7 @@
                     </div>
                     <div class="speech">
                         <div class="threepiospeech">
-                            <p>Please ask me a yes or no question to help you decide:</p>
+                            <p>Please ask a yes or no question:</p>
                             <p>
                                 <input type="text" />
                                 <button>Decide!</button>
@@ -47,7 +48,7 @@
             </div>
             <div id="friendbox">
                 <div class="personbox">
-                    <img src="~/static/img/chewbacca.png" />
+                    <img src="/static/img/chewbacca.png" />
                 </div>
             </div>
         </div>
@@ -66,5 +67,6 @@
             <p>Todo: add selector and sound effects</p>
         </div>
     </div>
+    <audio src="/static/sound/saber_off.mp3" hidden="hidden" />
 </body>
 </html>
