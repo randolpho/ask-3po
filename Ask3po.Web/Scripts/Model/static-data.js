@@ -1,4 +1,4 @@
-﻿var JukeboxTracks = [
+﻿var JukeboxTracks = Object.freeze([
     { name: "20th Century-Fox Fanfare", url: "/static/music/1_01_Fanfare.mp3" },
     { name: "Main Title/Rebel Blockade Runner", url: "/static/music/1_02_Main_Title.mp3" },
     { name: "Imperial Attack", url: "/static/music/1_03_Imperial_Attack.mp3" },
@@ -23,9 +23,9 @@
     { name: "The Battle of Yavin", url: "/static/music/2_10_Battle_of_Yavin.mp3" },
     { name: "Throne Room (End Titles)", url: "/static/music/2_11_Throne_Room.mp3" },
     { name: "Binary Sunset (Alternative)", url: "/static/music/1_13_Binary_Sunset_Alternative.mp3" }
-];
+]);
 
-var FriendList = [
+var FriendList = Object.freeze([
     {
         name: "Beaker",
         img: "/static/img/beaker.jpg",
@@ -38,7 +38,7 @@ var FriendList = [
         name: "Boomhauer",
         img: "/static/img/boomhauer.png",
         words: [
-            "Yeah man I tell ya what... Did one of them snipe hunts last night... man with them dang ol' sticks and bags and Whack! Whack! man, go Woooo-loo-loo-loo!",
+            "With them dang ol' sticks and bags and Whack! Whack! man, go Woooo-loo-loo-loo!",
             "Dang ol she can't speak dang 'ol like we do man but dang 'ol tell you what man she speak the language of love man.",
         ]
     },
@@ -81,7 +81,7 @@ var FriendList = [
             "Temba, his arms wide.",
             "Darmok and Jalad at Tanagra.",
             "Mirab, his sails unfurled.",
-            "Sokath - his eyes uncovered."
+            "Sokath, his eyes uncovered!"
         ]
     },
     {
@@ -101,7 +101,7 @@ var FriendList = [
         name: "Kenny",
         img: "/static/img/kenny.png",
         words: [
-            "Mmph mmmph mphfrph!",
+            "Mymm mipf mo muv muphy!",
             "Mmphn frphha herrpha."
         ]
     },
@@ -118,14 +118,15 @@ var FriendList = [
         img: "/static/img/mushmouth.jpg",
         words: [
             "Budeep a bubba da beep my lubba.",
-            "Dobe notbe libeben tobe boombe habe werbe. Hebe nebeberbe mabekebe sebens."
+            "Dobe notbe libeben tobe boombe habe werbe. Hebe nebeberbe mabekebe sebens.",
+            "Kebe nybe habe sebe abe dibe rtbe mobe thebe."
         ]
     },
     {
         name: "The Pyro",
         img: "/static/img/pyro.png",
         words: [
-            "Bwauuun,waanana!",
+            "Bwauuun, bwaanana!",
             "Mmph mmmph mphfrph!",
             "Mhnk nhya mgh mhph."
         ]
@@ -143,6 +144,12 @@ var FriendList = [
     {
         name: "Schnitzel",
         img: "/static/img/shnitzel.png",
-        words: ["Radda radda radda radda!", "Radda. Radda radda radda radda."]
+        words: ["Radda radda radda radda!", "Radda. Radda radda radda radda.", "Radda radda?"]
     }
-];
+]);
+
+var SoundEffects = Object.freeze({
+    hello: "/static/sound/hello.mp3",
+    saberOn: "/static/sound/saber_on.mp3",
+    saberOff: "/static/sound/saber_off.mp3"
+});

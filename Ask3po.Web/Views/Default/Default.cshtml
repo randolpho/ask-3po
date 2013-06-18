@@ -5,11 +5,18 @@
     <link rel="icon" type="image/png" href="/static/img/c3po-icon.png" />
     <link href="/static/style.css" rel="stylesheet" />
     <script src="/Scripts/knockout-2.2.1.js"></script>
+    <script src="/Scripts/Model/static-data.js"></script>
     <script src="/Scripts/Model/proxy.js"></script>
+    <script src="/Scripts/Model/util.js"></script>
+    <script src="/Scripts/ViewModel/conversation-item.js"></script>
+    <script src="/Scripts/ViewModel/sound-vm.js"></script>
+    <script src="/Scripts/ViewModel/conversation-vm.js"></script>
+    <script src="/Scripts/ViewModel/jukebox-vm.js"></script>
+    <script src="/Scripts/ViewModel/app-vm.js"></script>
 </head>
 <body>
     <div id="content">
-        <div id="main">
+        <div id="main" data-bind="with: conversationVm">
             <h1>ASK THREEPIO</h1>
             <div id="threepiobox">
                 <div class="personbox">
@@ -17,8 +24,17 @@
                 </div>
             </div>
             <div id="chatbox">
-                <div id="chatboxinner">
-                    <div class="speech">
+                <div id="chatboxinner" data-bind="foreach: speechBubbles">
+                    <div data-bind="css: rootCss">
+                        <div data-bind="css: typeCss">
+                            <p data-bind="text: words"></p>
+                            <p data-bind="if: isInput">
+                                <input type="text" data-bind="value: questionText" />
+                                <button data-bind="click: decisionClick">Decide</button>
+                            </p>
+                        </div>
+                    </div>
+@*                    <div class="speech">
                         <div class="threepiospeech">
                             <p>Oh!</p>
                             <p>Hello there. I am C-3P0, Human-Cyborg Relations. You must be my new master.</p>
@@ -33,8 +49,6 @@
                         <div class="threepiospeech">
                             <p>Please ask a yes or no question:</p>
                             <p>
-                                <input type="text" />
-                                <button>Decide!</button>
                             </p>
                         </div>
                     </div>
@@ -43,12 +57,12 @@
                             <p>Oh!</p>
                             <p>Hello there. I am C-3P0, Human-Cyborg Relations. You must be my new master.</p>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
             </div>
-            <div id="friendbox">
+            <div id="friendbox" data-bind="visible: friendboxShowing">
                 <div class="personbox">
-                    <img src="/static/img/chewbacca.png" />
+                    <img data-bind="attr: { src: friendboxImage }" src="/static/img/chewbacca.png" />
                 </div>
             </div>
         </div>
@@ -57,7 +71,7 @@
         &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
                     They were blatantly stolen and used without permission. Something, something, Fair Use? 
     </div>
-    <div id="jukebox">
+    <div id="jukebox" data-bind="with: jukeboxVm">
         <div id="jukebox-tab">♬	CANTINA JUKEBOX</div>
         <div id="jukebox-content">
             <audio id="player" controls="controls">
@@ -67,6 +81,20 @@
             <p>Todo: add selector and sound effects</p>
         </div>
     </div>
-    <audio src="/static/sound/saber_off.mp3" hidden="hidden" />
+    <div style="display: none;" data-bind="with: soundEffectVm">
+        <audio data-bind="attr: { src: currentSoundEffect }" autoplay="autoplay" hidden="hidden" />
+    </div>
+    <script type="text/ecmascript">
+        var vm = new AppViewModel();
+        ko.applyBindings(vm);
+
+        setTimeout(function() {
+            vm.conversationVm.initialize();
+        }, 1);
+
+        //setTimeout(function() {
+        //    vm.soundEffectVm.setSoundEffect("hello");
+        //}, 1000);
+    </script>
 </body>
 </html>
