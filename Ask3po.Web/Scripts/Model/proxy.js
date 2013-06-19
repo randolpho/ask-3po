@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var DecisionProxy = {
+var DecisionProxy = Object.freeze({
 
     getDecision: function GetDecision(question, callback) {
         var uri = "/decision?q=" + encodeURIComponent(question);
@@ -32,4 +32,4 @@ var DecisionProxy = {
         }
         request.send(data);
     }
-};
+});

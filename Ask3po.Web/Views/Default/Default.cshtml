@@ -5,6 +5,7 @@
     <link rel="icon" type="image/png" href="/static/img/c3po-icon.png" />
     <link href="/static/style.css" rel="stylesheet" />
     <script src="/Scripts/knockout-2.2.1.js"></script>
+    @*<script src="~/Scripts/knockout-2.2.1.debug.js"></script>*@
     <script src="/Scripts/Model/static-data.js"></script>
     <script src="/Scripts/Model/proxy.js"></script>
     <script src="/Scripts/Model/util.js"></script>
@@ -28,13 +29,15 @@
                     <div data-bind="css: rootCss">
                         <div data-bind="css: typeCss">
                             <p data-bind="text: words"></p>
-                            <p data-bind="if: isInput">
-                                <input type="text" data-bind="value: questionText" />
-                                <button data-bind="click: decisionClick">Decide</button>
-                            </p>
+                            <form data-bind="if: isInput, submit: decisionClick">
+                                <p>
+                                    <input type="text" data-bind="value: questionText" />
+                                    <button type="submit">Decide</button>
+                                </p>
+                            </form>
                         </div>
                     </div>
-@*                    <div class="speech">
+                    @*                    <div class="speech">
                         <div class="threepiospeech">
                             <p>Oh!</p>
                             <p>Hello there. I am C-3P0, Human-Cyborg Relations. You must be my new master.</p>
@@ -60,9 +63,9 @@
                     </div>*@
                 </div>
             </div>
-            <div id="friendbox" data-bind="visible: friendboxShowing">
+            <div id="friendbox" class="pop" data-bind="css: friendBoxCss">
                 <div class="personbox">
-                    <img data-bind="attr: { src: friendboxImage }" src="/static/img/chewbacca.png" />
+                    <img data-bind="attr: { src: friendboxImage }" />
                 </div>
             </div>
         </div>
@@ -88,7 +91,7 @@
         var vm = new AppViewModel();
         ko.applyBindings(vm);
 
-        setTimeout(function() {
+        setTimeout(function () {
             vm.conversationVm.initialize();
         }, 1);
 
