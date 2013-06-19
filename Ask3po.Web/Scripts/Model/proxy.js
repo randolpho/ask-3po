@@ -16,6 +16,7 @@ var DecisionProxy = Object.freeze({
         request.open(method, uri, true);
         request.responseType = "text";
         request.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        request.setRequestHeader("Accept", "application/json");
 
         request.onreadystatechange = function ResponseHandler() {
             if (request.readyState != 4) return; // skip the other states; only interested in finished state

@@ -1,26 +1,23 @@
-﻿@font-face
-{
+﻿@font-face {
     font-family: STARWARS;
     font-style: normal;
     font-weight: normal;
     src: local(STARWARS), url('/static/fonts/STARWARS.TTF') format('opentype');
 }
 
-@font-face
-{
+@font-face {
     font-family: SWCrawlBody;
     font-style: normal;
     font-weight: normal;
     src: local(SWCrawlBody), url('/static/fonts/SWCrawlBody.TTF') format('opentype');
 }
 
-html
-{
+
+html {
     height: 100%;
 }
 
-body
-{
+body {
     background: black url("/static/img/stars.jpg") no-repeat center center;
     font-family: SWCrawlBody, 'Arial Rounded MT';
     font-size: 12pt;
@@ -29,8 +26,7 @@ body
     height: 100%;
 }
 
-h1
-{
+h1 {
     font-family: STARWARS;
     font-size: 48px;
     text-align: center;
@@ -38,8 +34,7 @@ h1
     text-shadow: 0px 0px 30px #DAB43C;
 }
 
-#content
-{
+#content {
     position: fixed;
     top: 0px;
     bottom: 30px;
@@ -48,14 +43,12 @@ h1
     overflow: auto;
 }
 
-#main
-{
+#main {
     margin: 0 auto;
     width: 1000px;
 }
 
-#footer
-{
+#footer {
     position: fixed;
     bottom: 0px;
     height: 30px;
@@ -66,8 +59,7 @@ h1
 }
 
 
-#jukebox-tab
-{
+#jukebox-tab {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -92,8 +84,7 @@ h1
     text-shadow: 0px 0px 10px #DAB43C;
 }
 
-#jukebox
-{
+#jukebox {
     -webkit-border-radius: 0 20px 20px 0;
     -moz-border-radius: 0 20px 20px 0;
     -ms-border-radius: 0 20px 20px 0;
@@ -107,10 +98,10 @@ h1
     position: fixed;
     left: -402px;
     top: 50px;
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-ms-transition-property: all;
-	-o-transition-property: all;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: 0.15s;
     -moz-transition-duration: 0.15s;
@@ -119,43 +110,59 @@ h1
     transition-duration: 0.15s;
 }
 
-    #jukebox:hover
-    {
+    #jukebox:hover {
         left: 0px;
     }
 
-#jukebox-content
-{
+    #jukebox audio {
+        max-width: 250px;
+    }
+
+#jukebox-content {
     padding: 20px;
 }
 
-#threepiobox
-{
+#threepiobox {
     float: left;
     width: 280px;
     height: 394px;
 }
 
-#friendbox
-{
+#friendbox {
     float: right;
     width: 280px;
     height: 394px;
-    
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-ms-transition-property: all;
-	-o-transition-property: all;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
     transition-property: all;
-	-webkit-transition-duration: .15s;
-	-moz-transition-duration: .15s;
-	-ms-transition-duration: .15s;
-	-o-transition-duration: .15s;
+    -webkit-transition-duration: .15s;
+    -moz-transition-duration: .15s;
+    -ms-transition-duration: .15s;
+    -o-transition-duration: .15s;
     transition-duration: .15s;
+
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\beaker.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\boomhauer.png');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\charley brown.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\chef.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\chewbacca.png');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\cousin it.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\dathon.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\gary.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\hodor.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\kenny.png');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\librarian.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\mushmouth.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\pyro.png');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\qbert.jpg');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\r2d2.JPG');
+    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\shnitzel.png');
+    background-image: url();
 }
 
-.personbox
-{
+.personbox {
     -webkit-border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -ms-border-radius: 20px 20px 20px 20px;
@@ -169,14 +176,12 @@ h1
     vertical-align: middle;
 }
 
-    .personbox img
-    {
+    .personbox img {
         max-width: 240px;
         max-height: 360px;
     }
 
-#chatbox
-{
+#chatbox {
     position: relative;
     float: left;
     height: 390px;
@@ -184,16 +189,14 @@ h1
     overflow: hidden;
 }
 
-#chatboxinner
-{
+#chatboxinner {
     position: relative;
     height: 390px;
     width: 445px;
     overflow-y: scroll;
 }
 
-.speech
-{
+.speech {
     position: relative;
     width: 390px;
     margin: 0 auto;
@@ -206,27 +209,24 @@ h1
     -o-border-radius: 20px 20px 20px 20px;
     border-radius: 20px 20px 20px 20px;
     border: 2px solid #DAB43C;
-    
-	-webkit-transition-property: all;
-	-moz-transition-property: all;
-	-ms-transition-property: all;
-	-o-transition-property: all;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
     transition-property: all;
-	-webkit-transition-duration: .15s;
-	-moz-transition-duration: .15s;
-	-ms-transition-duration: .15s;
-	-o-transition-duration: .15s;
+    -webkit-transition-duration: .15s;
+    -moz-transition-duration: .15s;
+    -ms-transition-duration: .15s;
+    -o-transition-duration: .15s;
     transition-duration: .15s;
 }
 
-    .speech p
-    {
+    .speech p {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-.threepiospeech:before
-{
+.threepiospeech:before {
     content: "";
     position: absolute;
     z-index: 10;
@@ -241,8 +241,7 @@ h1
     border-bottom-right-radius: 80px 50px;
 }
 
-.threepiospeech:after
-{
+.threepiospeech:after {
     content: "";
     position: absolute;
     z-index: 10;
@@ -257,8 +256,7 @@ h1
     border-bottom-right-radius: 40px 50px;
 }
 
-.friendspeech:before
-{
+.friendspeech:before {
     content: "";
     position: absolute;
     z-index: 10;
@@ -273,8 +271,7 @@ h1
     border-bottom-left-radius: 80px 50px;
 }
 
-.friendspeech:after
-{
+.friendspeech:after {
     content: "";
     position: absolute;
     z-index: 10;
@@ -289,12 +286,11 @@ h1
     border-bottom-left-radius: 40px 50px;
 }
 
-input
-{
+input {
     margin: 2px;
     height: 24px;
     width: 220px;
-    border: 2px solid #DAB43C;   
+    border: 2px solid #DAB43C;
     background: black;
     color: #DAB43C;
     border-radius: 15px;
@@ -302,16 +298,14 @@ input
     padding-right: 10px;
 }
 
-    input:focus
-    {
+    input:focus {
         outline: none;
     }
 
-button
-{
+button {
     height: 30px;
     background: transparent;
-    border: 2px solid #DAB43C;        
+    border: 2px solid #DAB43C;
     font-family: STARWARS;
     text-align: center;
     color: black;
@@ -321,32 +315,27 @@ button
     padding-right: 20px;
     border-radius: 20px;
     margin: 2px;
-    margin-left: 5px; 
+    margin-left: 5px;
     margin-right: 5px;
 }
-button:active
-{
-    border: 2px solid #b69630;   
-    position: relative;
-    top: 1px;
-    left: 1px;
-}
+
+    button:active {
+        border: 2px solid #b69630;
+        position: relative;
+        top: 1px;
+        left: 1px;
+    }
 
 .pop {
     opacity: 0;
-	/*-webkit-transform: scale(0.01, 0.01);
-	-moz-transform: scale(0.01, 0.01);
-	-ms-transform: scale(0.01, 0.01);
-	-o-transform: scale(0.01 0.01);*/
-	-webkit-transform: scale(0, 0);
-	-moz-transform: scale(0, 0);
-	-ms-transform: scale(0, 0);
-	-o-transform: scale(0 0);
-    transform: scale(0, 0);
+    -webkit-transform: scale(0.01, 0.01);
+    -moz-transform: scale(0.01, 0.01);
+    -ms-transform: scale(0.01, 0.01);
+    -o-transform: scale(0.01, 0.01);
+    transform: scale(0.01, 0.01);
 }
 
-.slideup
-{
+.slideup {
     height: 0;
     margin: 0;
     padding: 0;

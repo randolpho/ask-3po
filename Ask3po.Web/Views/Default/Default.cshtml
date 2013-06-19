@@ -26,7 +26,7 @@
             </div>
             <div id="chatbox">
                 <div id="chatboxinner" data-bind="foreach: speechBubbles">
-                    <div data-bind="css: rootCss">
+                    <div data-bind="css: rootCss, style: styleMap" >
                         <div data-bind="css: typeCss">
                             <p data-bind="text: words"></p>
                             <form data-bind="if: isInput, submit: decisionClick">
@@ -70,6 +70,16 @@
         setTimeout(function () {
             vm.conversationVm.initialize();
         }, 1);
+        var useIeAnimationHack = false;
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            useIeAnimationHack = true;
+        }
     </script>
+    <!-- enable IE animation hack -->
+    <!--[if IE]>
+        <script type="text/ecmascript">
+            useIeAnimationHack = true;
+        </script>
+    <![endif]-->
 </body>
 </html>

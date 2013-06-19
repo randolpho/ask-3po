@@ -11,9 +11,15 @@ function ConversationItemViewmodel(type, words, conversationVm) {
     this.isInput = (type === "input");
     this.typeCss = "threepiospeech";
 
+    this.styleMap = {
+        display: ko.observable(useIeAnimationHack ? "none": ""),
+        //display: ko.observable("none"),
+    };
+
     if (type === "friend") this.typeCss = "friendspeech";
 
     this.popIn = function PopIn() {
+        if(useIeAnimationHack)  self.styleMap.display("block");
         self.rootCss(stableClass);
     }
     this.popOut = function PopOut() {

@@ -23,6 +23,13 @@ function ConversationViewModel(soundEffectVm) {
         setTimeout(self.addInput, 1500);
     }
 
+    this.preloadImages = function PreloadFriendImages() {
+        for (var i = 0; i < FriendList.length; i++) {
+            self.friendboxImage(FriendList[i].img);
+        }
+        self.friendboxImage("");
+    }
+
     this.addInput = function AddInput() {
         self.addBubble("input", "Please ask a yes or no question:");
     }
@@ -38,7 +45,7 @@ function ConversationViewModel(soundEffectVm) {
     this.addBubble = function AddBubble(type, words) {
         var vm = new ConversationItemViewmodel(type, words, this);
         self.speechBubbles.push(vm);
-        setTimeout(function () { vm.popIn(); }, 1); // necessary to time this so rendering can occur
+        setTimeout(function () { vm.popIn(); }, 100); // necessary to time this so rendering can occur
         if (!vm.isInput) {
             setTimeout(function () {
                 self.popBubble(vm);
