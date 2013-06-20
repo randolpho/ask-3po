@@ -151,9 +151,12 @@ function ConversationViewModel(soundEffectVm) {
             self.showFriend(friend.img);
             setTimeout(function () {
                 self.addThreepio(question);
-                setTimeout(thinking, self.timeBetweenBubbles);
+                setTimeout(function () {
+                    self.addThreepio("Hmm.... it would appear that he needs some time to think about it, sir.");
+                    setTimeout(thinking, self.timeBetweenBubbles);
+                }, self.timeBetweenBubbles);
             }, self.timeBetweenBubbles);
-        }, 500);
+        }, self.timeBetweenBubbles);
 
     };
 }

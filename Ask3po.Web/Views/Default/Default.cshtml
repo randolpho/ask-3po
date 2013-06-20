@@ -50,7 +50,7 @@
         &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
                     They were blatantly stolen and used without permission. Something, something, Fair Use? 
     </div>
-    <div id="jukebox" data-bind="with: jukeboxVm">
+    <div id="jukebox" data-bind="with: jukeboxVm, event: { mouseover: jukeboxVm.onMouseOver, mouseout: jukeboxVm.onMouseOut, mouseoverBubble: false, mouseoutBubble: false }">
         <div id="jukebox-tab">♬	CANTINA JUKEBOX</div>
         <div id="jukebox-content">
             <audio id="player" controls="controls">
@@ -61,7 +61,15 @@
         </div>
     </div>
     <div style="display: none;" data-bind="with: soundEffectVm">
-        <audio data-bind="attr: { src: currentSoundEffect }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect0 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect1 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect2 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect3 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect4 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect6 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect7 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect8 }" autoplay="autoplay" hidden="hidden" />
+        <audio data-bind="attr: { src: soundEffect9 }" autoplay="autoplay" hidden="hidden" />
     </div>
     <script type="text/ecmascript">
         var vm = new AppViewModel();

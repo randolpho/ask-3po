@@ -4,5 +4,5 @@
 function AppViewModel() {
     this.soundEffectVm = new SoundEffectViewModel();
     this.conversationVm = new ConversationViewModel(this.soundEffectVm);
-    this.jukeboxVm = new JukeboxViewModel();
+    this.jukeboxVm = new JukeboxViewModel(this.soundEffectVm);
 }
