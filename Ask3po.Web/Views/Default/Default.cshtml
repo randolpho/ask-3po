@@ -9,6 +9,7 @@
     <script src="/Scripts/Model/static-data.js"></script>
     <script src="/Scripts/Model/proxy.js"></script>
     <script src="/Scripts/Model/util.js"></script>
+    <script src="/Scripts/ViewModel/song-vm.js"></script>
     <script src="/Scripts/ViewModel/conversation-item.js"></script>
     <script src="/Scripts/ViewModel/sound-vm.js"></script>
     <script src="/Scripts/ViewModel/conversation-vm.js"></script>
@@ -26,7 +27,7 @@
             </div>
             <div id="chatbox">
                 <div id="chatboxinner" data-bind="foreach: speechBubbles">
-                    <div data-bind="css: rootCss, style: styleMap" >
+                    <div data-bind="css: rootCss, style: styleMap">
                         <div data-bind="css: typeCss">
                             <p data-bind="text: words"></p>
                             <form data-bind="if: isInput, submit: decisionClick">
@@ -50,14 +51,21 @@
         &copy; 2013 Nobody. Images, characters and music are copyright their respective holders. 
                     They were blatantly stolen and used without permission. Something, something, Fair Use? 
     </div>
-    <div id="jukebox" data-bind="with: jukeboxVm, event: { mouseover: jukeboxVm.onMouseOver, mouseout: jukeboxVm.onMouseOut, mouseoverBubble: false, mouseoutBubble: false }">
+    <div id="jukebox" data-bind="with: jukeboxVm">
         <div id="jukebox-tab">♬	CANTINA JUKEBOX</div>
         <div id="jukebox-content">
-            <audio id="player" controls="controls">
-                <source type="audio/mpeg" src="/static/music/1_11_Cantina.mp3" />
-            </audio>
-            <br />
-            <p>Todo: add selector and sound effects</p>
+            <div id="jukebox-controls">
+                <img src="/static/img/boxart.jpg" /><br />
+                <audio data-bind="attr: { src: currentSong }, event: { ended: songEnded }" id="mainplayer" autoplay="autoplay" controls="controls" />
+            </div>
+            <h4>Play list</h4>
+            <div id="jukebox-tracks">
+                <ul data-bind="foreach: songs">
+                    <li data-bind="css: css">
+                        <p data-bind="click: $parent.selectSong, text: name">Song</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div style="display: none;" data-bind="with: soundEffectVm">
@@ -72,22 +80,27 @@
         <audio data-bind="attr: { src: soundEffect9 }" autoplay="autoplay" hidden="hidden" />
     </div>
     <script type="text/ecmascript">
-        var vm = new AppViewModel();
-        ko.applyBindings(vm);
 
-        setTimeout(function () {
-            vm.conversationVm.initialize();
-        }, 1);
+        // everything was going so swimmingly! All my styles worked across all browsers, it layed out
+        // identically across all three major browsers. Opera? What's that, now? 
+        // So anyway, it all works great, until I get to animating the speech bubbles. Who do you think 
+        // didn't fall into line with my animation technique? Of course, IE. Ever the black sheep of browsers,
+        // even with 10. :/
+        //($index)
+        // No, it's not possible that my technique sucks. Why would you say something so hurtful?
         var useIeAnimationHack = false;
         if (navigator.appName == "Microsoft Internet Explorer") {
             useIeAnimationHack = true;
         }
+
+        // I'm deliberately not using JQuery. But I want $(document).ready()! 
+        // guess I gotta roll my own...
+        document.addEventListener("DOMContentLoaded", function () {
+            var vm = new AppViewModel();
+            vm.conversationVm.initialize();
+            vm.jukeboxVm.initialize();
+            ko.applyBindings(vm);
+        });
     </script>
-    <!-- enable IE animation hack -->
-    <!--[if IE]>
-        <script type="text/ecmascript">
-            useIeAnimationHack = true;
-        </script>
-    <![endif]-->
 </body>
 </html>

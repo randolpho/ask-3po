@@ -132,6 +132,7 @@
     <Content Include="Scripts\ViewModel\app-vm.js" />
     <Content Include="Scripts\ViewModel\conversation-vm.js" />
     <Content Include="Scripts\ViewModel\jukebox-vm.js" />
+    <Content Include="Scripts\ViewModel\song-vm.js" />
     <Content Include="Scripts\ViewModel\sound-vm.js" />
     <Content Include="static\img\beaker.jpg" />
     <Content Include="static\img\boomhauer.png" />
@@ -179,6 +180,7 @@
     <Content Include="static\music\2_09_Ben_Kenobi_s_Death.mp3" />
     <Content Include="static\music\2_10_Battle_of_Yavin.mp3" />
     <Content Include="static\music\2_11_Throne_Room.mp3" />
+    <Content Include="static\sound\blank.mp3" />
     <Content Include="static\sound\hello.mp3" />
     <Content Include="static\sound\human-cyborg relations.mp3" />
     <Content Include="static\sound\saber_off.mp3" />

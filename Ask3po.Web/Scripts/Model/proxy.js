@@ -25,7 +25,9 @@ var DecisionProxy = Object.freeze({
             try {
                 json = JSON.parse(response);
             }
-            catch (e) { /* do nothing */ }
+            catch (e) {
+                console.log("Error parsing XHR result: " + e);
+            }
             callback(json, request.status, response);
         }
         if (data && typeof (data) !== "string") {

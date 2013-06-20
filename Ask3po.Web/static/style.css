@@ -18,12 +18,27 @@ html {
 }
 
 body {
-    background: black url("/static/img/stars.jpg") no-repeat center center;
+    background: black url("/static/img/stars.jpg") no-repeat;
     font-family: SWCrawlBody, 'Arial Rounded MT';
     font-size: 12pt;
     overflow: hidden;
     color: #DAB43C;
     height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1 {
@@ -32,6 +47,28 @@ h1 {
     text-align: center;
     color: black;
     text-shadow: 0px 0px 30px #DAB43C;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+h4 {
+    font-family: STARWARS;
+    font-size: 12pt;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 10px #DAB43C;
+    margin: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #content {
@@ -77,7 +114,7 @@ h1 {
     width: 200px;
     text-align: center;
     position: relative;
-    left: 309px;
+    left: 179px;
     top: 125px;
     font-family: STARWARS;
     color: black;
@@ -93,10 +130,10 @@ h1 {
     border-top: 2px solid #DAB43C;
     border-bottom: 2px solid #DAB43C;
     border-right: 2px solid #DAB43C;
-    width: 400px;
-    height: 300px;
+    width: 270px;
+    height: 500px;
     position: fixed;
-    left: -402px;
+    left: -272px;
     top: 50px;
     -webkit-transition-property: all;
     -moz-transition-property: all;
@@ -118,9 +155,66 @@ h1 {
         max-width: 250px;
     }
 
-#jukebox-content {
-    padding: 20px;
+#jukebox-controls {
+    opacity: .75;
 }
+
+#jukebox-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+#jukebox-tracks {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 246px;
+    height: 200px;
+    opacity: .6;
+}
+
+    #jukebox-tracks ul {
+        margin: 0;
+        padding: 2px;
+        text-align: left;
+        font-size: 10pt;
+        list-style-type: none;
+    }
+
+        #jukebox-tracks ul li {
+            background: black;
+            opacity: .6;
+            padding: 4px;
+            overflow: hidden;
+            height: 12px;
+        }
+
+            #jukebox-tracks ul li p {
+                margin: 0;
+                padding: 0;
+            }
+
+            #jukebox-tracks ul li :hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            #jukebox-tracks ul li .current {
+                background: white;
+                color: black;
+            }
+
+                #jukebox-tracks ul li .current :hover {
+                    cursor: default;
+                }
+
+                #jukebox-tracks ul li .current p:before {
+                    content: "♬ ";
+                }
+
+
 
 #threepiobox {
     float: left;
@@ -142,7 +236,11 @@ h1 {
     -ms-transition-duration: .15s;
     -o-transition-duration: .15s;
     transition-duration: .15s;
-
+    -webkit-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -moz-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -ms-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -o-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185); /* custom */
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\beaker.jpg');
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\boomhauer.png');
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\charley brown.jpg');
@@ -219,6 +317,11 @@ h1 {
     -ms-transition-duration: .15s;
     -o-transition-duration: .15s;
     transition-duration: .15s;
+    -webkit-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -moz-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -ms-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    -o-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
+    transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185); /* custom */
 }
 
     .speech p {
