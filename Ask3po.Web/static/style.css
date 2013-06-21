@@ -1,11 +1,13 @@
-﻿@font-face {
+﻿@font-face
+{
     font-family: STARWARS;
     font-style: normal;
     font-weight: normal;
     src: local(STARWARS), url('/static/fonts/STARWARS.TTF') format('opentype');
 }
 
-@font-face {
+@font-face
+{
     font-family: SWCrawlBody;
     font-style: normal;
     font-weight: normal;
@@ -13,11 +15,13 @@
 }
 
 
-html {
+html
+{
     height: 100%;
 }
 
-body {
+body
+{
     background: black url("/static/img/stars.jpg") no-repeat;
     font-family: SWCrawlBody, 'Arial Rounded MT';
     font-size: 12pt;
@@ -32,7 +36,8 @@ body {
     user-select: none;
 }
 
-div p {
+div p
+{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -41,7 +46,8 @@ div p {
     user-select: none;
 }
 
-h1 {
+h1
+{
     font-family: STARWARS;
     font-size: 48px;
     text-align: center;
@@ -56,7 +62,8 @@ h1 {
 }
 
 
-h4 {
+h4
+{
     font-family: STARWARS;
     font-size: 12pt;
     text-align: center;
@@ -71,7 +78,8 @@ h4 {
     user-select: none;
 }
 
-#content {
+#content
+{
     position: fixed;
     top: 0px;
     bottom: 30px;
@@ -80,12 +88,14 @@ h4 {
     overflow: auto;
 }
 
-#main {
+#main
+{
     margin: 0 auto;
     width: 1000px;
 }
 
-#footer {
+#footer
+{
     position: fixed;
     bottom: 0px;
     height: 30px;
@@ -96,7 +106,8 @@ h4 {
 }
 
 
-#jukebox-tab {
+#jukebox-tab
+{
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -121,7 +132,8 @@ h4 {
     text-shadow: 0px 0px 10px #DAB43C;
 }
 
-#jukebox {
+#jukebox
+{
     -webkit-border-radius: 0 20px 20px 0;
     -moz-border-radius: 0 20px 20px 0;
     -ms-border-radius: 0 20px 20px 0;
@@ -147,19 +159,23 @@ h4 {
     transition-duration: 0.15s;
 }
 
-    #jukebox:hover {
+    #jukebox:hover
+    {
         left: 0px;
     }
 
-    #jukebox audio {
+    #jukebox audio
+    {
         max-width: 250px;
     }
 
-#jukebox-controls {
+#jukebox-controls
+{
     opacity: .75;
 }
 
-#jukebox-content {
+#jukebox-content
+{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -167,7 +183,8 @@ h4 {
     text-align: center;
 }
 
-#jukebox-tracks {
+#jukebox-tracks
+{
     overflow-x: hidden;
     overflow-y: auto;
     width: 246px;
@@ -175,7 +192,8 @@ h4 {
     opacity: .6;
 }
 
-    #jukebox-tracks ul {
+    #jukebox-tracks ul
+    {
         margin: 0;
         padding: 2px;
         text-align: left;
@@ -183,46 +201,48 @@ h4 {
         list-style-type: none;
     }
 
-        #jukebox-tracks ul li {
-            background: black;
-            opacity: .6;
-            padding: 4px;
+        #jukebox-tracks ul li
+        {
+            background: transparent;
             overflow: hidden;
-            height: 12px;
         }
 
-            #jukebox-tracks ul li p {
+            #jukebox-tracks ul li p
+            {
+                background: black;
+                opacity: .6;
                 margin: 0;
-                padding: 0;
+                padding: 5px;
+                height: 12px;
             }
 
-            #jukebox-tracks ul li :hover {
-                opacity: 1;
-                cursor: pointer;
-            }
-
-            #jukebox-tracks ul li .current {
-                background: white;
-                color: black;
-            }
-
-                #jukebox-tracks ul li .current :hover {
-                    cursor: default;
+                #jukebox-tracks ul li p:hover
+                {
+                    opacity: 1;
+                    cursor: pointer;
                 }
 
-                #jukebox-tracks ul li .current p:before {
-                    content: "♬ ";
+                #jukebox-tracks ul li p.current
+                {
+                    background: white;
+                    color: black;
                 }
 
+                    #jukebox-tracks ul li p.current:hover
+                    {
+                        cursor: text;
+                        opacity: .6;
+                    }
 
-
-#threepiobox {
+#threepiobox
+{
     float: left;
     width: 280px;
     height: 394px;
 }
 
-#friendbox {
+#friendbox
+{
     float: right;
     width: 280px;
     height: 394px;
@@ -236,11 +256,6 @@ h4 {
     -ms-transition-duration: .15s;
     -o-transition-duration: .15s;
     transition-duration: .15s;
-    -webkit-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -moz-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -ms-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -o-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185); /* custom */
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\beaker.jpg');
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\boomhauer.png');
     background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\charley brown.jpg');
@@ -260,7 +275,8 @@ h4 {
     background-image: url();
 }
 
-.personbox {
+.personbox
+{
     -webkit-border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -ms-border-radius: 20px 20px 20px 20px;
@@ -274,12 +290,14 @@ h4 {
     vertical-align: middle;
 }
 
-    .personbox img {
+    .personbox img
+    {
         max-width: 240px;
         max-height: 360px;
     }
 
-#chatbox {
+#chatbox
+{
     position: relative;
     float: left;
     height: 390px;
@@ -287,14 +305,16 @@ h4 {
     overflow: hidden;
 }
 
-#chatboxinner {
+#chatboxinner
+{
     position: relative;
     height: 390px;
     width: 445px;
     overflow-y: scroll;
 }
 
-.speech {
+.speech
+{
     position: relative;
     width: 390px;
     margin: 0 auto;
@@ -317,19 +337,16 @@ h4 {
     -ms-transition-duration: .15s;
     -o-transition-duration: .15s;
     transition-duration: .15s;
-    -webkit-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -moz-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -ms-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    -o-transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185);
-    transition-timing-function: cubic-bezier(0.480, 1.125, 0.670, 1.185); /* custom */
 }
 
-    .speech p {
+    .speech p
+    {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-.threepiospeech:before {
+.threepiospeech:before
+{
     content: "";
     position: absolute;
     z-index: 10;
@@ -344,7 +361,8 @@ h4 {
     border-bottom-right-radius: 80px 50px;
 }
 
-.threepiospeech:after {
+.threepiospeech:after
+{
     content: "";
     position: absolute;
     z-index: 10;
@@ -359,7 +377,8 @@ h4 {
     border-bottom-right-radius: 40px 50px;
 }
 
-.friendspeech:before {
+.friendspeech:before
+{
     content: "";
     position: absolute;
     z-index: 10;
@@ -374,7 +393,8 @@ h4 {
     border-bottom-left-radius: 80px 50px;
 }
 
-.friendspeech:after {
+.friendspeech:after
+{
     content: "";
     position: absolute;
     z-index: 10;
@@ -389,7 +409,8 @@ h4 {
     border-bottom-left-radius: 40px 50px;
 }
 
-input {
+input
+{
     margin: 2px;
     height: 24px;
     width: 220px;
@@ -401,11 +422,13 @@ input {
     padding-right: 10px;
 }
 
-    input:focus {
+    input:focus
+    {
         outline: none;
     }
 
-button {
+button
+{
     height: 30px;
     background: transparent;
     border: 2px solid #DAB43C;
@@ -422,14 +445,16 @@ button {
     margin-right: 5px;
 }
 
-    button:active {
+    button:active
+    {
         border: 2px solid #b69630;
         position: relative;
         top: 1px;
         left: 1px;
     }
 
-.pop {
+.pop
+{
     opacity: 0;
     -webkit-transform: scale(0.01, 0.01);
     -moz-transform: scale(0.01, 0.01);
@@ -438,7 +463,8 @@ button {
     transform: scale(0.01, 0.01);
 }
 
-.slideup {
+.slideup
+{
     height: 0;
     margin: 0;
     padding: 0;

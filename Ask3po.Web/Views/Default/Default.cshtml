@@ -58,11 +58,11 @@
                 <img src="/static/img/boxart.jpg" /><br />
                 <audio data-bind="attr: { src: currentSong }, event: { ended: songEnded }" id="mainplayer" autoplay="autoplay" controls="controls" />
             </div>
-            <h4>Play list</h4>
+            <h4>PLAYLIST</h4>
             <div id="jukebox-tracks">
                 <ul data-bind="foreach: songs">
-                    <li data-bind="css: css">
-                        <p data-bind="click: $parent.selectSong, text: name">Song</p>
+                    <li>
+                        <p data-bind="css: css, click: $parent.selectSong, text: name">Song</p>
                     </li>
                 </ul>
             </div>
