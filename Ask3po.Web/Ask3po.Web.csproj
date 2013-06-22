@@ -153,8 +153,6 @@
     <Content Include="static\img\qbert.jpg" />
     <Content Include="static\img\r2d2.JPG" />
     <Content Include="static\img\shnitzel.png" />
-    <Content Include="Scripts\knockout-2.2.1.debug.js" />
-    <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="static\img\stars.jpg" />
     <Content Include="static\music\1_01_Fanfare.mp3" />
     <Content Include="static\music\1_02_Main_Title.mp3" />

@@ -3,7 +3,7 @@
     font-family: STARWARS;
     font-style: normal;
     font-weight: normal;
-    src: local(STARWARS), url('/static/fonts/STARWARS.TTF') format('opentype');
+    src: local(STARWARS), url('/static/fonts/STARWARS.ttf') format('opentype');
 }
 
 @font-face
@@ -11,7 +11,7 @@
     font-family: SWCrawlBody;
     font-style: normal;
     font-weight: normal;
-    src: local(SWCrawlBody), url('/static/fonts/SWCrawlBody.TTF') format('opentype');
+    src: local(SWCrawlBody), url('/static/fonts/SWCrawlBody.ttf') format('opentype');
 }
 
 
@@ -22,7 +22,7 @@ html
 
 body
 {
-    background: black url("/static/img/stars.jpg") no-repeat;
+    background: black url("http://randolpho.github.io/ask-3po/static/img/stars.jpg") no-repeat;
     font-family: SWCrawlBody, 'Arial Rounded MT';
     font-size: 12pt;
     overflow: hidden;
@@ -256,22 +256,28 @@ h4
     -ms-transition-duration: .15s;
     -o-transition-duration: .15s;
     transition-duration: .15s;
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\beaker.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\boomhauer.png');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\charley brown.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\chef.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\chewbacca.png');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\cousin it.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\dathon.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\gary.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\hodor.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\kenny.png');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\librarian.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\mushmouth.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\pyro.png');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\qbert.jpg');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\r2d2.JPG');
-    background-image: url('C:\dev\personal\git\repros\ask-3po\Ask3po.Web\static\img\shnitzel.png');
+
+    /* 
+        I have no way of being able to tell if this preloading hack is working, simply because my internet connection is too fast. 
+        
+        First world problems. :/
+    */
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/beaker.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/boomhauer.png');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/charley brown.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/chef.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/chewbacca.png');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/cousin it.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/dathon.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/gary.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/hodor.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/kenny.png');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/librarian.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/mushmouth.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/pyro.png');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/qbert.jpg');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/r2d2.JPG');
+    background-image: url('http://randolpho.github.io/ask-3po/static/img/shnitzel.png');
     background-image: url();
 }
 

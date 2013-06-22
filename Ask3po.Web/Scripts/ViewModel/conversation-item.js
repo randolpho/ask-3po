@@ -12,8 +12,7 @@ function ConversationItemViewmodel(type, words, conversationVm) {
     this.typeCss = "threepiospeech";
 
     this.styleMap = {
-        display: ko.observable(useIeAnimationHack ? "none": ""),
-        //display: ko.observable("none"),
+        display: ko.observable(useIeAnimationHack ? "none": "")
     };
 
     if (type === "friend") this.typeCss = "friendspeech";

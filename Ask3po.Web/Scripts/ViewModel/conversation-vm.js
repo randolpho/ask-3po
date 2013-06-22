@@ -11,7 +11,12 @@ function ConversationViewModel(soundEffectVm) {
     this.speechBubbles = ko.observableArray([]);
     this.friendBoxCss = ko.observable("pop");
     this.friendboxImage = ko.observable("");
+    this.friendboxAttr = {
+        width: ko.observable(0),
+        height: ko.observable(0)
+    };
     this.initialize = function Initialize() {
+        self.preloadImages();
         setTimeout(function () {
             self.addThreepio(
                 "Oh! Hello sir! I am C-3P0, Human-Cyborg Relations. You must be my new master.");
@@ -63,9 +68,13 @@ function ConversationViewModel(soundEffectVm) {
         }, 200);
     }
 
-    this.showFriend = function ShowFriend(imgUrl) {
-        self.friendboxImage(imgUrl);
-        self.friendBoxCss("");
+    this.showFriend = function ShowFriend(friend) {
+        self.friendboxAttr.width(friend.height);
+        self.friendboxAttr.height(friend.width);
+        self.friendboxImage(friend.img);
+        setTimeout(function () {
+            self.friendBoxCss("");
+        }, 1000);
     }
 
     this.hideFriend = function HideFriend() {
@@ -148,7 +157,7 @@ function ConversationViewModel(soundEffectVm) {
         setTimeout(function () {
             self.addThreepio("It's against my programming to offer direct advice. Would you mind if I asked my friend "
                 + friend.name + "?");
-            self.showFriend(friend.img);
+            self.showFriend(friend);
             setTimeout(function () {
                 self.addThreepio(question);
                 setTimeout(function () {
