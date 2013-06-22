@@ -316,7 +316,8 @@ h4
     position: relative;
     height: 390px;
     width: 445px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
+    overflow: hidden;
 }
 
 .speech
