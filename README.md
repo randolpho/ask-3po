@@ -14,8 +14,8 @@ that followed.
 
 The basic structure of Ask Threepio is fairly straightforward. When the user asks C-3P0
 a text question, that question is filtered through each of Google Translate's languages,
-one to the other, then back into english. A hashcode is computed from the result, and 
-if the hashcode is even the result is "Yes", or "No" for an odd hashcode. To ensure users 
+one to the other, then back into english. A hashcode is computed from the result; if it's 
+even the answer is "Yes", and if it's odd the answer is "No". To ensure users 
 don't get the same answer every time they ask a question, the order of language-to-language
 translation is randomized, although the results are always translated back to english.
 
@@ -68,10 +68,10 @@ Finally, because I'm intending to host this in the cloud for the contest, I have
 used Github Pages as a CDN for my static binaries. I'm doing this because Github Pages doesn't
 seem to care about bandwidth -- they don't provide me with any sort of reporting on the subject
 and haven't complained yet -- but Microsoft Azure absolutely does, and the jukebox sucks up my
-alloted bandwitdh very, very fast. Yes, Github Pages isn't exactly performant, but this is 
-about being cheap, not about being fast. Oddly, I couldn't do that with the fonts I'm using. IE 10 complains about cross-domain origins
-on fonts, although Chrome and Firefox don't care. That's actually a good thing, and bully to IE
-for doing it right. 
+alloted bandwidth very, very fast. Yes, Github Pages isn't exactly performant, but this is 
+about being cheap, not about being fast. Oddly, I couldn't do that with the fonts I'm using. 
+IE 10 complains about cross-domain origins on fonts, although Chrome and Firefox don't care. 
+That's actually a good thing, and good on IE for doing it right. 
 
 Ok, I can't think of anything else that's important so I'll sign off. 
 
