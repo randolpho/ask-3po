@@ -1,5 +1,5 @@
-ask-3po
-=======
+Ask Threepio
+============
 
 Ask Threepio, an entry to the [OMGWTF2 contest](http://omg2.thedailywtf.com/). 
 
