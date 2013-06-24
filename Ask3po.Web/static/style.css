@@ -157,6 +157,7 @@ h4
     -ms-transition-duration: 0.15s;
     -o-transition-duration: 0.15s;
     transition-duration: 0.15s;
+    background: black;
 }
 
     #jukebox:hover
@@ -171,7 +172,7 @@ h4
 
 #jukebox-controls
 {
-    opacity: .75;
+    opacity: .8;
 }
 
 #jukebox-content
@@ -189,7 +190,7 @@ h4
     overflow-y: auto;
     width: 246px;
     height: 200px;
-    opacity: .6;
+    opacity: .8;
 }
 
     #jukebox-tracks ul
@@ -210,7 +211,7 @@ h4
             #jukebox-tracks ul li p
             {
                 background: black;
-                opacity: .6;
+                opacity: .8;
                 margin: 0;
                 padding: 5px;
                 height: 12px;
@@ -231,7 +232,7 @@ h4
                     #jukebox-tracks ul li p.current:hover
                     {
                         cursor: text;
-                        opacity: .6;
+                        opacity: .8;
                     }
 
 #threepiobox

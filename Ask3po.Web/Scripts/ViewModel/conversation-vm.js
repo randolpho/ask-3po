@@ -6,8 +6,8 @@
 /// <reference path="../knockout-2.2.1.debug.js" />
 function ConversationViewModel(soundEffectVm) {
     var self = this;
-    this.speechBubbleStayingPower = 2500; // 2 seconds
-    this.timeBetweenBubbles = 1500;
+    this.speechBubbleStayingPower = 4000; // 4 seconds
+    this.timeBetweenBubbles = 2500;
     this.speechBubbles = ko.observableArray([]);
     this.friendBoxCss = ko.observable("pop");
     this.friendboxImage = ko.observable("");
