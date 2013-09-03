@@ -3,6 +3,17 @@ Ask Threepio
 
 Ask Threepio, an entry to the [OMGWTF2 contest](http://omg2.thedailywtf.com/). 
 
+Awards
+------
+Ask Threepio won the [Lipstick on a Pig](http://thedailywtf.com/Articles/OMGWTF2-Lipstick-on-a-Pig.aspx) prize!
+
+Demo
+----
+I have hosted a demonstration on azure at
+
+http://ask-threepio.azurewebsites.net/
+
+
 Overview
 --------
 
